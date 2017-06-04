@@ -1,0 +1,188 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	background-color:#e2a4ff;
+	font-family:verdana;
+	font-size:15px;
+	color: rgb(0,0,51);
+}
+
+h1
+{
+	font:34pt Georgia;
+	margin:10px;
+	font-style: italic;
+	color: rgb(0,0,51);
+	text-align: center;
+}
+
+.light {
+	background-color: #fffacd;
+}
+
+
+#event_table
+{
+	margin:5px 10px 10px;
+}
+
+#event_table .table_header
+{
+	color: rgb(0,0,51);
+	font-size:30px;
+	font-weight:400;
+	padding-left:5px;
+	text-align:center;
+	text-decoration:none;
+	width:400px;
+	font-family: Georgia;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+#event_table .even_row
+{
+	background-color:#e2a4ff;
+	height:54px;
+}
+
+#event_table .odd_row
+{
+	background-color:#bd66e6;
+	height:54px;
+}
+
+#event_table .hr_td
+{
+	text-align:right;
+	width:60px;
+	padding: 6px;
+	font-weight: bold;
+}
+
+.container
+{
+	background-color: #F9F9F9;
+	border-radius: 3px;
+	font:15px Verdana, sans-serif;
+	margin:20px auto;
+	padding:5px;
+	width:1200px;
+}
+
+#next
+{
+	float:right;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+
+#prev
+{
+	float:left;
+	margin-bottom:10px;
+	margin-left:10px;
+}
+
+#today
+{
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	width:100px;
+}
+
+
+input, textarea {
+	border-radius: 2px;
+	padding: 7px;
+	font-size: 14px;
+}
+
+label {
+	font-weight: bold;
+}
+
+
+.stylized form{
+	margin:0;
+	width:550px;
+	padding:6px;
+}
+
+
+.stylized label{
+	font-size:15px;
+	font-family: Georgia;
+}
+
+
+.stylized fieldset {
+	border:solid 2px #959696;
+	padding: 6px;
+}
+.stylized legend{
+	font-size: 22px; 
+	color: #0148a0; 
+}
+
+.stylized td {
+	padding: 5px 5px 5px 0px;
+}
+
+
+.stylized input[type="radio"] {
+	margin-right: 6px;
+}
+
+input[value="Create Event"]
+{
+	border: 2px solid black;
+	float: right;
+}
+
+.calendar.ui-widget {
+    font-size: .9em;
+}
+
+.ui-widget-content {
+    background: #F9F9F9;
+    color: #222222;
+}
+
+.calendar.ui-widget-content {
+	padding: 0;
+	border: 1px solid #90d93f;
+}
+
+
+.ui-widget-header {
+    background: #b0de78;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.calendar.ui-dialog .ui-dialog-titlebar {
+    padding: 0;	
+    position: relative;
+    font-size: .9em;
+    font-weight: bold;
+    color: rgb(0,0,51);
+}
+
+
+.create.ui-dialog .ui-dialog-titlebar {
+	padding: 0.1em .5em;
+    position: relative;
+    font-size: 25px;
+}
+
+.ui-widget input, .ui-widget textarea {
+    font-size: 15px;
+}

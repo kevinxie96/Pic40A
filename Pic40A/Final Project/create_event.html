@@ -1,0 +1,54 @@
+<form class="stylized" id="form1" action="" method="post">
+<fieldset>
+	<legend>Event Information</legend>
+
+	<label class='people'>Kevin Xie</label> <input type='radio' name='person' value='Kevin_Xie' />
+	<label class='people'>Yifang Yan</label> <input type='radio' name='person' value='Yifang_Yan' />
+	<label class='people'>Jianye Xie</label> <input type='radio' name='person' value='Jianye_Xie' />
+
+	<br/><br/>
+
+	<p>Date should be in format M-D-Y.  For example 11-24-2015.  Time is 24 hour time in format hh:mm.  For example 15:00.</p>
+	<br/>
+	
+<table>
+	<tr>
+		<td>
+		<label for="date">Date</label>
+		</td>
+		<td colspan="3"><input type="text" name="date" id="date" value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="start_time">Start Time</label>
+		</td>
+		<td>
+		<input type="text" name="start_time" id="start_time" value=""/>
+		</td>
+		<td>
+		<label for="end_time">End Time</label>
+		</td>
+		<td>
+		<input type="text" name="end_time" id="end_time" value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<label for="event_title">Event Title</label>
+		</td>
+		<td colspan="3">
+		<input class="stylized" type="text" id="event_title" name="event_title" value=""/>
+		</td>
+	</tr>
+	<tr>
+		<td><label for="event_title">Event Details</label></td>
+		<td colspan="3"><textarea rows="10" cols="50" class="stylized" id="event_details" name="event_details" value=""/></textarea></td>
+	</tr>
+</table>
+<input type="button" name="saveevent" id="saveevent" value="Save Event" onclick="saveEvent()"/>
+<input type="button" name="loadevent" id="loadevent" value="Load Event" onclick="loadEvent()"/>
+<input type="button" name="clearevent" id="clearevent" value="Clear Event" onclick="clearEvent()"/>
+<input type="button" value="Create Event" onclick="process_form()"/>
+</fieldset>
+</form>

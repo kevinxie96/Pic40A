@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+	<link rel="stylesheet" type="text/css" href="mybusiness.css"/>
+	<title>Order2 HTML</title>
+ </head>
+<body>
+<!--Logo-->
+	<div class="backdrop">
+		<span class="maintext">Kevin's PC Bang Library (KPCBL)</span>
+		<div id="motto">Erudite Memes</div>
+	</div>
+
+<!--Drop Down Menu-->
+	<div id="menu">
+		<ul>
+	        <li><a href="#">Item One</a>
+	            <ul>
+	               <li><a href="#">Subitem One</a></li><li>
+	               <a href="#">Second Subitem</a></li><li>
+	               <a href="#">Numero Tres</a></li>
+	            </ul>
+	        </li>
+	        <li><a href="#">Second Item</a>
+	            <ul>
+	               <li><a href="#">Just one subitem</a></li>
+	            </ul>
+	        </li>
+	        <li><a href="#">No Subitem</a></li>
+	        <li><a href="#">Number Four</a>
+	            <ul>
+	               <li><a href="#">Subitem One</a></li><li>
+	               <a href="#">Second Subitem</a></li><li>
+	               <a href="#">Numero Tres</a></li><li>
+	               <a href="#">Fourth Thinger</a></li>
+	            </ul>         
+	        </li>
+	    </ul>
+    </div>
+
+<!--Sidebar-->
+	<div id="sidebar">
+		<ul id="navigate">
+			<li><a href="./mybusiness2.html">Home</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="./order2.html">Orders</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+		<div class="align">
+			<h2>KPCBL Honor List</h2>
+			<ol>
+				<li>UseAComputer&trade;</li>
+				<li>RentABook&trade;</li>
+				<li>KPCHotDogs&trade;</li>
+				<li>DankCandy&trade;</li>
+			</ol>
+			<h2>Also Check Out</h2>
+				<ul>
+				<li><a href="http://www.fritolay.com/snacks/product-page/doritos">Doritos&reg;</a></li>
+				<li><a href="http://www.mountaindew.com/">Mountain Dew&reg;</a></li>
+				<li><a href="http://www.fritolay.com/snacks/product-page/cheetos">Cheetos&reg;</a></li>	
+				</ul>
+			<div>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+				incididunt ut labore et dolore magna aliqua.
+			</div>
+			<div>
+				<h2>Validate Here</h2>
+				<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+			</div>
+
+			<address>
+			Call us: 512-983-6763<br/>
+			Visit us at:<br/>
+			510 LandFair Ave<br/>
+			Los Angeles, CA 90024<br/>
+			USA
+			</address>
+		</div>
+	</div>
+
+<!--Main Content-->
+	<div id="main">
+		<form method="post" action="submit.php">
+		<fieldset>
+			<legend>Customer Information</legend>
+				<label for="name">Name:</label> <input type="text" name="name" id="name"/><br/>
+				<label for="street">Street:</label> <input type="text" name="street" id="street"/><br/>
+				<label for="city">City:</label> <input type="text" name="city" id="city"/><br/>
+				<label for="state">State:</label> <input type="text" name="state" id="state"/><br/>
+				<label for="zipcode">Zipcode:</label> <input type="text" name="zipcode" id="zipcode"/><br/>
+				<label for="email">Email:</label> <input type="text" name="email" id="email"/><br/>
+		</fieldset>
+
+		<fieldset>
+			<legend>Order Information</legend>
+			<span>Where did you hear about us?</span>
+				<input type="radio" id="ff" name="marketing" value="friends&amp;family"/> 
+			<label for="ff">Friends and Family</label>
+				<input type="radio" id="news" name="marketing" value="newspaper"/> 
+			<label for="news">Newspaper</label>
+				<input type="radio" id="online" name="marketing" value="online"/>  
+			<label for="online">Online Advertisements</label>
+			<br/>
+				<br/>
+				<input type="checkbox" id="emails" name="future" value="emails"/> 
+			<label for="emails">I want emails on our deals and discounts!</label><br/>
+				<input type="checkbox" id="perm" name="future" value="perm"/> 
+			<label for="perm">I give permission for KPCBL to use photographs taken of me for marketing purposes.
+			</label>
+
+			<table border="1">
+			<tr><th>Product/Service</th><th>Description</th><th>Price</th><th>Quantity</th></tr>
+			<tr><td>DankCandy&trade;</td><td>Buy in bulk our famous sour mouses</td><td>&#36;20/lb</td>
+			<td><input type="text" name="quantity"/></td></tr>
+			</table>
+			
+			<br/>
+			<label for="card">Select a credit card:</label>
+			<select name="card" id="card">
+			  <option value="visa">Visa</option>
+			  <option value="mastercard">Mastercard</option>
+			  <option value="american express">American Express</option>
+			</select>
+			<label for="cdnumber">Credit Card Number:</label>
+			<input type="text" name="cdnumber" id="cdnumber"/>
+		</fieldset>
+
+		<fieldset>
+			<legend>End</legend>
+			<input type="submit" value="Submit"/> <input type="reset" value="Reset"/>
+			<h3> Thank you for your support! </h3>
+		</fieldset>
+		</form>
+	</div>
+
+<!--Footer-->
+	<div id="footer" class="backdrop">&copy;2017 Kevin Xie</div>
+</body>
+ </html>

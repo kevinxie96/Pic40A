@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="hw3style.css"/>
+<title>JavaScript HW3</title>
+<script type="text/javascript">
+<!-- 
+var last_number = null;
+var last_operator = null;
+var dot_exists = false;
+var action_exists = false;
+var last_entry = null;
+
+ function display(num) 
+ {
+    var node = document.getElementById("display");  
+	node.value=num;
+ }
+
+ function superDisplay(num) 
+ {
+ 	var node = document.getElementById("display");
+ 	if(!action_exists) 
+ 	{
+	 	var concat = node.value + num;
+	 	display(concat);
+	}
+	else 
+	{
+		node.value = num;
+		action_exists = false;
+	}
+ }
+ 
+ function float(dot) 
+ {
+ 	if (dot_exists) {
+ 		return;
+ 	}
+ 	else 
+ 	{
+ 		superDisplay(dot);
+ 		dot_exists = true;
+ 	}
+ }
+
+ function actions(op) 
+ {
+ 	var node = document.getElementById("display");
+ 	var result = 0;
+ 	var this_number = 0;
+ 	dot_exists = false;
+
+ 	if (last_operator == null)
+ 	{
+ 		last_number = node.value;
+ 		last_operator = op;
+ 		action_exists = true;
+ 		return;
+ 	}
+
+
+ 	if (last_number != null && last_operator != null)
+ 	{
+ 		last_number = Number(last_number);
+ 		this_number = Number(node.value);
+ 		if (last_operator == '+')
+			result = last_number + this_number;
+		else if (last_operator == '-')
+			result = last_number - this_number;
+		else if (last_operator == '*')
+			result = last_number * this_number;
+		else if (last_operator == '/')
+			result = last_number / this_number;
+ 	}
+
+ 	last_number = result;
+ 	node.value = result;
+
+ 	if (op == '='){
+ 		last_operator = null;
+ 	}
+ 	else 
+	{	
+		last_operator = op;
+		action_exists = true;
+	}
+ }
+
+ function scientific(sci)
+ {
+ 	var node = document.getElementById("display");
+ 	if (sci == 'ln')
+ 	{
+ 		node.value = Math.log(node.value);
+ 	}
+ 	else if (sci == 'sqrt')
+ 	{
+ 		node.value = Math.sqrt(node.value);
+ 	}
+ 	else if (sci == "exp")
+ 	{
+ 		node.value = Math.exp(node.value);
+ 	}
+ 	else 
+ 	{
+ 		node.value = Math.floor(node.value);
+ 	}
+ 	action_exists = true;
+ }
+
+//-->
+</script>
+</head>
+
+<body>
+<div id="main">
+<h1>Simple Calculator</h1>
+
+<!--This is the text box where numbers will be displayed.  Call the display function to show a number here -->
+<form action="" method="get">
+<p>
+	<input type="text" id="display"/>
+</p>
+</form>
+
+<form action="" method="get">
+<div>
+<input type="button" value="7" onclick="superDisplay('7')"/>
+<input type="button" value="8" onclick="superDisplay('8')"/>
+<input type="button" value="9" onclick="superDisplay('9')"/>
+<input type="button" value="/" onclick="actions('/')"/>
+<input type="button" value="ln" onclick="scientific('ln')"/><br/>
+<input type="button" value="4" onclick="superDisplay('4')"/>
+<input type="button" value="5" onclick="superDisplay('5')"/>
+<input type="button" value="6" onclick="superDisplay('6')"/>
+<input type="button" value="*" onclick="actions('*')"/>
+<input type="button" value="sqrt" onclick="scientific('sqrt')"/><br/>
+<input type="button" value="1" onclick="superDisplay('1')"/>
+<input type="button" value="2" onclick="superDisplay('2')"/>
+<input type="button" value="3" onclick="superDisplay('3')"/>
+<input type="button" value="-" onclick="actions('-')"/>
+<input type="button" value="exp" onclick="scientific('exp')"/><br/>
+<input type="button" value="." onclick="float('.')"/>
+<input type="button" value="0" onclick="superDisplay('0')"/>
+<input type="button" value="=" onclick="actions('=')"/>
+<input type="button" value="+" onclick="actions('+')"/>
+<input type="button" value="floor" onclick="scientific('floor')"/><br/>
+</div>
+</form>
+</div>
+<!-- W3C XHTML Validation logo-->
+<p>
+  <a href="http://validator.w3.org/check?uri=referer"><img
+     src="http://www.w3.org/Icons/valid-xhtml11"
+     alt="Valid XHTML 1.1" height="31" width="88" /></a>
+</p>
+</body>
+</html>

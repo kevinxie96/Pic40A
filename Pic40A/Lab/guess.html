@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Put your title here</title>
+	<meta charset = "utf-8" />
+</head>
+
+<body>
+	<fieldset>
+	<legend>What number am I thinking of?</legend>
+		<label for="guess">Do you wanna play a game? </label>
+		<input type="button" onclick="handleClick()" value="Start!"/>
+	</fieldset>
+
+	<p id="write_here"></p>
+	<script type="text/javascript">
+		<!--
+		function handleClick()
+		{
+			var answer = Math.floor(1 + Math.random() * 100);
+			var guess_list = "";
+			var guess = prompt("Guess a number: ", "50");
+			var recent ="";
+			while (guess != answer) 
+			{
+				var wrong_answer = "...Sorry, you're wrong. Your guess of " + guess;
+				if (guess > answer)
+				{
+					recent = wrong_answer + " is too high."
+				}
+				else
+				{
+					recent = wrong_answer + " is too low."
+				}
+				guess_list += recent + "<br>";
+				alert(recent);
+				guess = prompt("Guess a number: ", "50");
+			}
+
+			recent = "**Right** " + guess + " is the magic number.";
+			alert(recent);
+			guess_list += (recent);
+
+			if (confirm("Would you like to play again") == true) 
+			{
+				handleClick();
+			}
+
+			document.getElementById("write_here").innerHTML = guess_list;
+		}
+		//-->
+	</script>
+</body>
+</html>

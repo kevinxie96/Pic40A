@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+ 		<title>Order HTML</title>
+ 	</head>
+ 	<body>
+ 		<form method="post" action="submit.php">
+		<fieldset>
+ 			<legend>Customer Information</legend>
+	 			<label for="name">Name:</label> <input type="text" name="name" id="name"/><br/>
+	 			<label for="street">Street:</label> <input type="text" name="street" id="street"/><br/>
+	 			<label for="city">City:</label> <input type="text" name="city" id="city"/><br/>
+	 			<label for="state">State:</label> <input type="text" name="state" id="state"/><br/>
+	 			<label for="zipcode">Zipcode:</label> <input type="text" name="zipcode" id="zipcode"/><br/>
+	 			<label for="email">Email:</label> <input type="text" name="email" id="email"/><br/>
+		</fieldset>
+
+ 		<fieldset>
+			<legend>Order Information</legend>
+	 		<h4>Where did you hear about us?</h4>
+	 			<input type="radio" id="ff" name="marketing" value="friends&amp;family"/> 
+				<label for="ff">Friends and Family</label>
+	 			<input type="radio" id="news" name="marketing" value="newspaper"/> 
+				<label for="news">Newspaper</label>
+	 			<input type="radio" id="online" name="marketing" value="online"/>  
+				<label for="online">Online Advertisements</label>
+				<br/>
+	 			<br/>
+	 			<input type="checkbox" id="emails" name="future" value="emails"/> 
+				<label for="emails">I want emails on our deals and discounts!</label><br/>
+	 			<input type="checkbox" id="perm" name="future" value="perm"/> 
+				<label for="perm">I give permission for KPCBL to use photographs taken of me for marketing purposes.
+				</label>
+
+	 			<table border="1">
+				<tr><th>Product/Service</th><th>Description</th><th>Price</th><th>Quantity</th></tr>
+				<tr><td>DankCandy&trade;</td><td>Buy in bulk our famous sour mouses</td><td>&#36;20/lb</td>
+				<td><input type="text" name="quantity"/></td></tr>
+				</table>
+				
+				<br/>
+				<label for="card">Select a credit card:</label>
+				<select name="card" id="card">
+				  <option value="visa">Visa</option>
+				  <option value="mastercard">Mastercard</option>
+				  <option value="american express">American Express</option>
+				</select>
+				<label for="cdnumber">Credit Card Number:</label>
+				<input type="text" name="cdnumber" id="cdnumber"/>
+		</fieldset>
+		
+		<fieldset>
+		<legend>End</legend>
+		<input type="submit" value="Submit"/> <input type="reset" value="Reset"/>
+		<h3> Thank you for your support! </h3>
+		</fieldset>
+	 	</form>
+ 	<div>
+ 		<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+ 	</div>
+ 	</body>
+ </html>

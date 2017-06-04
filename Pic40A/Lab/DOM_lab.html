@@ -1,0 +1,162 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+<title>JavaScript Example</title>
+
+<style type="text/css">
+
+#box {
+width: 50px;
+height: 50px;
+border: 1px solid;
+background-color: blue;
+}
+
+#grow 
+{
+	width: 5%;
+	position: absolute;
+	left: 50%;
+}
+
+</style>
+
+
+
+<script type="text/javascript">
+<!-- 
+var left_counter = 0;
+var top_counter = 0;
+
+function start() {
+	var divObj = document.getElementById("box");
+	divObj.style.position="absolute";
+	divObj.style.left = "10px";
+	divObj.style.top = "10px";
+	left_move_it();
+}
+
+function left_move_it() {
+	var divObj = document.getElementById("box");
+	var left_offset = divObj.style.left;
+	left_offset = parseInt(left_offset);
+	left_offset = ++left_offset + "px";
+	divObj.style.left = left_offset;
+	left_counter++;
+	if (left_counter < 400)
+	{
+		setTimeout("left_move_it()",20);
+	}
+	else 
+	{
+		top_move_it();
+	}
+}
+
+function top_move_it() {
+	var divObj = document.getElementById("box");
+	var top_offset = divObj.style.top;
+	top_offset = parseInt(top_offset);
+	top_offset = ++top_offset + "px";
+	divObj.style.top = top_offset;
+	top_counter++;
+	if (top_counter < 400)
+	{
+		setTimeout("top_move_it()",20);
+	}	
+	else
+	{
+		right_move_it();
+	}
+}
+
+function right_move_it() {
+	var divObj = document.getElementById("box");
+	var left_offset = divObj.style.left;
+	left_offset = parseInt(left_offset);
+	left_offset = --left_offset + "px";
+	divObj.style.left = left_offset;
+	left_counter--;
+	if (left_counter > 0)
+	{
+		setTimeout("right_move_it()",20);
+	}
+	else 
+	{
+		bottom_move_it();
+	}
+}
+
+function bottom_move_it() {
+	var divObj = document.getElementById("box");
+	var top_offset = divObj.style.top;
+	top_offset = parseInt(top_offset);
+	top_offset = --top_offset + "px";
+	divObj.style.top = top_offset;
+	top_counter--;
+	if (top_counter > 0)
+	{
+		setTimeout("bottom_move_it()",20);
+	}
+}
+
+var grow_counter = 0;
+
+function handleClick()
+{
+	var square = document.getElementById("place");
+	square.style.position="absolute";
+	square.style.left = "50%";
+	square.style.top = "50%";
+	square.style.backgroundColor="red";
+	square.style.padding = "0px";
+	grow();	
+}
+
+function grow() 
+{
+	var square = document.getElementById("place");
+	var padding = square.style.padding;
+	padding = parseInt(padding);
+	padding = ++padding + "px";
+	square.style.padding = padding;
+	grow_counter++;
+	if (grow_counter < 100)
+	{
+		setTimeout("grow()",20);
+	}
+	else 
+	{
+		shrink();
+	}
+}
+
+function shrink() {
+	var square = document.getElementById("place");
+	var padding = square.style.padding;
+	padding = parseInt(padding);
+	padding = --padding + "px";
+	square.style.padding = padding;
+	grow_counter--;
+	if (grow_counter > 0)
+	{
+		setTimeout("shrink()",20);
+	} 
+}
+//-->
+</script>
+
+</head>
+<body onload="start()"> 
+
+	<div id="box"></div>
+	<fieldset id="grow">
+	<legend>Button</legend>
+	<input type="button" onclick="handleClick()" value="Grow"/>
+	</fieldset>
+	<div id="place"></div>
+</html>
